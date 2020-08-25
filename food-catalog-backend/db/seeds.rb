@@ -12,22 +12,22 @@ entrees, desserts, drinks = Catalog.create([
   {name: "Entrees"}, {name: "Desserts"}, {name: "Drinks"}
 ])
 
-entrees.foods.create([
+entrees.food.create([
   {
     name: "Lemon Poppy Seed Muffin", 
     cost: 2.25, 
     description: "Lemon poppy seed muffin.",
     image_url: "assets/images/lemon-poppyseed-muffin.jpeg"
   },
-
   {
-    name: "Dugtrio Sandwich Trio"
+    name: "Dugtrio Sandwich Trio",
     cost: 1.60,
     description: "Dugtrio Sandwich Trio",
     image_url: "assets/images/dugtrio-sandwich.jpg"
   }
+])
 
-  desserts.foods.create([
+  desserts.food.create([
   {
     name: "Hot Coffee", 
     cost: 1.50,
@@ -37,12 +37,25 @@ entrees.foods.create([
   {
     name: "Fluffy Eevee Pancakes",
     cost: 1.00,
-    description: "Bouncy pancakes that look like eevee"
+    description: "Bouncy pancakes that look like eevee",
     image_url: "assets/images/eevee-pancakes.jpg"
-  }
-   
-  ])
-
-  
-
+  } 
 ])
+
+  drinks.food.create
+  ([
+    {
+    name: "Iced Coffee", 
+    price: 2.00,
+    description: "Coffee brewed double-strength via French press method served in 16oz glass over ice.",
+    image_url: "assets/images/iced-coffee.jpg"
+    },
+    {
+    name: "Buneary Frappe",
+    cost: 1.00,
+    description: "Buneary Frappe drink looks like a Buneary",
+    image_url: "assets/images/buneary-frappe.jpg"
+   }
+      
+])
+
