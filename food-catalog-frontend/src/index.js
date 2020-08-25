@@ -1,1 +1,2 @@
-console.log("Hello")
+const app = new App()
+app.start()
