@@ -1,4 +1,4 @@
-class IngredientsAdapter {
+class FoodsAdapter {
     constructor() {
       this.baseURL = "http://localhost:3000/foods"
     }
