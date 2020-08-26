@@ -4,10 +4,10 @@ class FoodsAdapter {
     }
   
     getFoods() {
-      return fetch(this.baseURL).then(response => response.json()).then(json => (json.data))
+      return fetch(this.baseURL).then(resp => resp.json()).then(json => (json.data))
     }
 
-    postItems(data) {
+    postFoods(data) {
       return fetch(this.baseURL, {
         method: "POST",
         headers: {

@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <script src="src/components/catalog.js" defer></script>
-    <script src="src/components/food.js" defer></script>
-    <script src="src/components/app.js" defer></script>
-    <script src="src/adapters/CatalogsAdapter.js" defer></script>
-    <script src="src/adapters/FoodsAdapter.js" defer></script>
-    <script src="src/index.js" defer></script>
+    <script src="src/components/catalog.js" ></script>
+    <script src="src/components/food.js" ></script>
+    <script src="src/components/app.js" ></script>
+    <script src="src/adapters/CatalogsAdapter.js" ></script>
+    <script src="src/adapters/FoodsAdapter.js" ></script>
+    <script src="src/index.js" ></script>
     <title>Universal Food Catalog</title>
 </head>
 <body>
     <h1>Meal Catalog</h1>
-    <nav class="menu-nav">
-        <ul id="menu">
-            <li class="menu-name">Entrees</li>
-            <li class="menu-name">Desserts</li>
-            <li class="menu-name">Drinks</li>
-            <li class="menu-name">All Items</li>
-            <li class="menu-name">Add New Items</li>
+    <nav class="catalog-nav">
+        <ul id="catalog">
+            <li class="catalog-name">Entrees</li>
+            <li class="catalog-name">Desserts</li>
+            <li class="catalog-name">Drinks</li>
+            <li class="catalog-name">All Items</li>
+            <li class="catalog-name">Add New Items</li>
         </ul>
     </nav>
     <div class="container">
         <form id="create-catalog-food-form">
-            <label for="menu">Catalog Name:</label>
+            <label for="catalog">Catalog Name:</label>
             <select class="form-control" id="catalog-select">
             <option selected="selected">All Items</option>
             
@@ -35,8 +35,8 @@
             <input type="food-name" class="form-control" id="food-name" aria-describedby="emailHelp" placeholder="Enter Food name" required>
         </div>
         <div class="form-group">
-            <label for="price">Cost:</label>
-            <input type="text" class="form-control" id="price" placeholder="Enter Food Price" required>
+            <label for="cost">Cost:</label>
+            <input type="text" class="form-control" id="cost" placeholder="Enter Food Price" required>
         </div>
         <div class="form-group">
             <label for="image">Image URL:</label>

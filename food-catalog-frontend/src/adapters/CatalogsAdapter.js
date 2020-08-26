@@ -4,8 +4,8 @@ class CatalogsAdapter{
     }
 
     getCatalogs() {
-        return fetch(this.baseURL).then(response => response.json()).then(json => json.data)
-      }
+        return fetch(this.baseURL).then(resp => resp.json()).then(json => json.data)
+    }
 
 
 }

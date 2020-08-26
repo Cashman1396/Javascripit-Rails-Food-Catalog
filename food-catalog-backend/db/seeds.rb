@@ -158,6 +158,18 @@ entrees.foods.create([
     cost: 1.50,
     description: "Hot coffee brewed via French press method served in a 12oz mug.",
     image_url: "assets/images/hot-coffee.jpg"
-  },  
+  },
+  {
+    name: "Bouncy Brionne Soda",
+    cost: 5.50,
+    description: "A refreshing soda inspired by Brionne dancing in the water. Enjoy the bouncy texture of the gummies",
+    image_url: "assets/images/bouncysoda.jpg"
+  },
+  {
+    name: "Miltank Mix au Lait",
+    cost: 4.75,
+    description: "Fresh Moomoo Milk is used in this mix au lait. The sweet and tart flavor of the berries really stands out",
+    image_url: "assets/images/miltankaulait.jpg"
+  }
 ])
 

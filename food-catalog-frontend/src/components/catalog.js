@@ -8,8 +8,8 @@ class Catalog {
     }
 
     addListenerToCatalog() {
-        const catalogsNames = document.querySelectorAll(".catalog-name")
-        catalogsNames.forEach(catalog => {
+        const catalogNames = document.querySelectorAll(".catalog-name")
+        catalogNames.forEach(catalog => {
             catalog.addEventListner("click", () => {
                 const container = document.querySelector(".container")
                 container.style.display = "flex"
@@ -26,6 +26,9 @@ class Catalog {
                         this.clearPage()
                         this.renderDrinksFoods()
                         break
+                    case "Add New Foods":
+                        this.clearPage()
+                        this.renderAddCatalogFoodForm()
                     default:
                         this.clearPage
                         this.renderAllFoods
@@ -41,6 +44,58 @@ class Catalog {
         })
         this.form.style.display = "none"
     }
+
+    renderEntreesFoods() {
+        const entreesFoods = []
+        this.catalogsAdapter.getCatalogs.then(catalog=> {
+            catalogs[0].attributes.foods.forEach(food => {
+                const entreesFood = new Food(food.name, food.cost, food.description, food.image_url, food.id, food.catalog_id)
+                ent
+                .push(entreesFood)
+            })
+            const sortedEntreesFoods = entreesFoods.sort((a,b) => a.namr.localeCompare(b.name))
+            sortedEntreesFoods.forEach(food.createFoodCard())
+        })
+    }
+
+    renderDessertsFoods() {
+        const dessertsFoods = []
+        this.catalogsAdapter.getCatalogs.then(catalogs => {
+            catalogs[1].attributes.foods.forEach(food => {
+                const dessertsFood = new Food(food.name, food.cost, food.description, food.image_url, food.id, food.catalog_id)
+                dessertsFoods.push(dessertsFood)
+            })
+            const sortedDessertsFoods = dessertsFoods.sort((a,b) => a.name.localeCompare(b.name))
+            sortedDessertsFoods.forEach(food => food.createFoodCard())
+        })
+    }
+
+    renderDrinksFoods() {
+        const drinksFoods = []
+        this.catalogsAdapter.getCatalogs.then(catalogs => {
+            catalogs[2].attributes.foods.forEach(food => {
+                const drinksFood = new Food(food.name, food.cost, food.description, food.image_url, food.id, food.catalog_id)
+                drinksFoods.push(dessertsFood)
+            })
+            const sortedDrinksFoods = drinksFoods.sort((a,b) => a.name.localeCompare(b.name))
+            sortedDrinksFoods.forEach(food => food.createFoodCard())
+        })
+    }
+
+    renderAllFoods(){
+
+    }
+
+    populateCatalogNameToForm() {
+
+    }
+
+    
+
+    
+
+
+
 
 
 }

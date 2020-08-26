@@ -30,7 +30,21 @@ class Food {
         foodNameCost.className = "name-and-cost"
         
         const foodName = document.createElement("div")
-        foodName.className = "food-name";
+        foodName.className = "food-name"
+        foodName.textContent = this.name
+
+        const foodCost = document.createElement("div")
+        foodCost.className = "food-cost"
+        foodCost.textContent = `\$${this.cost}`
+
+        const foodDesc = document.createElement("div")
+        foodDesc.className = "food-description"
+        foodDesc.textContent = this.description
+
+        foodNameCost.append(foodName, foodCost)
+        foodCard.append(foodImage, foodNameCost, foodDesc)
+        container.append(foodCard)
+
     }
 }
 
