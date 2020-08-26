@@ -10,7 +10,7 @@ class Catalog {
     addListenerToCatalog() {
         const catalogNames = document.querySelectorAll(".catalog-name")
         catalogNames.forEach(catalog => {
-            catalog.addEventListner("click", () => {
+            catalog.addEventListener("click", () => {
                 const container = document.querySelector(".container")
                 container.style.display = "flex"
                 switch(catalog.textContent) {
@@ -29,9 +29,10 @@ class Catalog {
                     case "Add New Foods":
                         this.clearPage()
                         this.renderAddCatalogFoodForm()
+                        break
                     default:
                         this.clearPage
-                        this.renderAllFoods
+                        this.renderAllFoods()
                 }
             })
         })
@@ -47,20 +48,19 @@ class Catalog {
 
     renderEntreesFoods() {
         const entreesFoods = []
-        this.catalogsAdapter.getCatalogs.then(catalog=> {
+        this.catalogsAdapter.getCatalogs().then(catalog=> {
             catalogs[0].attributes.foods.forEach(food => {
                 const entreesFood = new Food(food.name, food.cost, food.description, food.image_url, food.id, food.catalog_id)
-                ent
-                .push(entreesFood)
+                entreesFoods.push(entreesFood)
             })
-            const sortedEntreesFoods = entreesFoods.sort((a,b) => a.namr.localeCompare(b.name))
-            sortedEntreesFoods.forEach(food.createFoodCard())
+            const sortedEntreesFoods = entreesFoods.sort((a,b) => a.name.localeCompare(b.name))
+            sortedEntreesFoods.forEach(food => food.createFoodCard())
         })
     }
 
     renderDessertsFoods() {
         const dessertsFoods = []
-        this.catalogsAdapter.getCatalogs.then(catalogs => {
+        this.catalogsAdapter.getCatalogs().then(catalogs => {
             catalogs[1].attributes.foods.forEach(food => {
                 const dessertsFood = new Food(food.name, food.cost, food.description, food.image_url, food.id, food.catalog_id)
                 dessertsFoods.push(dessertsFood)
@@ -72,7 +72,7 @@ class Catalog {
 
     renderDrinksFoods() {
         const drinksFoods = []
-        this.catalogsAdapter.getCatalogs.then(catalogs => {
+        this.catalogsAdapter.getCatalogs().then(catalogs => {
             catalogs[2].attributes.foods.forEach(food => {
                 const drinksFood = new Food(food.name, food.cost, food.description, food.image_url, food.id, food.catalog_id)
                 drinksFoods.push(dessertsFood)
@@ -83,18 +83,58 @@ class Catalog {
     }
 
     renderAllFoods(){
+        const allFoods = []
+        this.foodsAdapter.getFoods().then(foods => {
+            foods.forEach(food => {
+                const foodObj = new Food(food.attributes.name, food.attributes.cost, food.attributes.description, food.attributes.image_url, food.id, food.attributes.catalog.id, food.attributes.catalog.name)
+                allFoods.push(foodObj)
+            })
+            const sortedAllFoods = allFoods.sort((a,b) => a.name.localeCompare(b.name))
+            sortedAllFoods.forEach(food => food.createFoodCard())
+        })
+    }
 
+    renderAddCatalogFoodForm(){
+        this.form.style.display = "block"
+        this.form.style.margin = "0 auto"
+        this.form.addEventListener("submit", (e) => this.addNewCatalogFood(e))
     }
 
     populateCatalogNameToForm() {
+        this.catalogsAdapter.getCatalogs().then(catalogs => {
+            catalogs.forEach(catalog => {
+                const selectBox = document.querySelector("#catalog-select")
+                const option = document.createElement("option")
+                option.textContent = catalog.attributes.name
+                option.value = catalog.id
+                selectBox.append(option)
+            })
+        })
 
     }
 
-    
+    addNewCatalogFood(e) {
+        e.preventDefault()
+        const catalogNameSelect = document.querySelector("#catalog-select").value
+        const foodName = document.querySelector("#food-name").value
+        const foodCost = document.querySelector("cost").value
+        const foodDescription = document.querySelector("#description").value
+        const foodImage = document.querySelector("#image-url").value
+        const data = {
+            name: foodName,
+            cost: foodCost,
+            description: foodDescription,
+            image_url: foodImage,
+            catalog_id: catalogNameSelect
 
-    
-
-
+        }
+        this.foodsAdapter.postFoods(data).then(data => {
+            alert("Food was Created!")
+            this.form.reset()
+            this.clearPage()
+            this.renderAllFoods()
+        })
+    }
 
 
 
