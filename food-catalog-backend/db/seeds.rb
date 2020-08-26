@@ -56,7 +56,7 @@ entrees.foods.create([
     name: "Sour Cream and Onion Chips", 
     cost: 0.75,
     description: "Sour Cream and Onion Potato Chips",
-    image_url: "assets/images/sourcreamonion.jpeg"
+    image_url: "assets/images/sourcreamonion.jpg"
   },
   {
     name: "Fluffy Eevee Pancakes",
@@ -110,13 +110,19 @@ entrees.foods.create([
     name: "Crepes",
     cost: 5.50,
     description: "A thin folded dough dessert that can have many different combinations",
-    image_url: "assets/images/crepes.jpeg"
+    image_url: "assets/images/crepes.jpg"
   },
   {
     name: "Chocolate Ice Cream",
     cost: 4.50,
     description: "A delicious chocolate that is very sweet",
     image_url: "assets/images/chocoicecream.jpg"
+  },
+  {
+    name: "Key Lime Pie",
+    cost: 6.50,
+    description: "A sweet lime pie and pops in your mouth",
+    image_url: "assets/images/keylime.jpg"
   }
 
 
@@ -170,6 +176,12 @@ entrees.foods.create([
     cost: 4.75,
     description: "Fresh Moomoo Milk is used in this mix au lait. The sweet and tart flavor of the berries really stands out",
     image_url: "assets/images/miltankaulait.jpg"
+  },
+  {
+    name: "Poppin' Pachirisu Float",
+    cost: 4.99,
+    description: "A soda float that's zappy like Pachirisu's electricity! Only a pro can top it off with even more ice cream",
+    image_url: "assets/images/poppingpachirisufloat.jpg"
   }
 ])
 
