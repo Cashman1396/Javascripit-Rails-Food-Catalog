@@ -30,15 +30,33 @@ entrees.foods.create([
     cost: 3.95,
     description: "Delicious combo plate in the form of Gossifleur",
     image_url: "assets/images/gossifleur-plate.jpg"
-  }
+  },
+  {
+    name: "Cheesy Rowlet Pizza",
+    cost: 2.35,
+    description: "A cheese pizza that can lift you off your feet",
+    image_url: "assets/images/cheesyrowletpizza.jpg"   
+   },
+   {
+    name: "Gratin a la Pumpkaboo",
+    cost: 3.75,
+    description: "A gratin as generously sized as a large Pumpkaboo. This will surely satisfy your hunger!",
+    image_url: "assets/images/gratinpumpkaboo.jpg"
+   },
+   {
+    name: "Yummy Yamper Pasta",
+    cost: 4.18,
+    description: "A pasta bolognese depicting a playful Yamper. This cute and yummy dish will surely delight your taste buds and heart!",
+    image_url: "assets/images/yamper-pasta.jpg"
+   }
 ])
 
   desserts.foods.create([
   {
-    name: "Hot Coffee", 
-    cost: 1.50,
-    description: "Hot coffee brewed via French press method served in a 12oz mug.",
-    image_url: "assets/images/hot-coffee.jpg"
+    name: "Sour Cream and Onion Chips", 
+    cost: 0.75,
+    description: "Sour Cream and Onion Potato Chips",
+    image_url: "assets/images/sourcreamonion.jpeg"
   },
   {
     name: "Fluffy Eevee Pancakes",
@@ -49,15 +67,58 @@ entrees.foods.create([
   {
     name: "Swablu Shaved Ice",
     cost: 1.50,
-    description: "Light, and Fluffy Ice cream",
+    description: "Shaved ice shaped like a Swablu. Make sure you eat up before it melts!",
     image_url: "assets/images/swablushavedice.jpg"
   },
   {
     name: "Burnt-Caramel Vulpix Sundae",
     cost: 2.50,
-    description: "Caramel Sundae",
+    description: "A sweet and bitter dessert that depicts the cuteness and beauty of Vulpix. It tastes as good as it looks",
     image_url: "assets/images/vulpix-sundae.jpg"
+  },
+  {
+    name: "Combee Waffles with Honey",
+    cost: 2.10,
+    description: "Sweet waffles in the form of some cute bees",
+    image_url: "assets/images/combeewaffles.jpg"
+  },
+  {
+    name: "Rainbow Oricorio Popcorn",
+    cost: 3.15,
+    description: "Rainbow assorted popcorn of dancing birds",
+    image_url: "assets/images/oricorio-popcorn.jpg"
+  },
+  {
+    name: "Strawberry Cheesecake", 
+    cost: 3.75, 
+    description: "New York style cheesecake served with strawberry compote.",
+    image_url: "assets/images/strawberry-cheesecake.jpeg"
+  },
+  {
+    name: "Skillet Chocolate Chip Cookie", 
+    cost: 3.75, 
+    description: "Chocolate chip cookie baked in cast-iron skillet topped with vanilla ice cream, whipped cream, chocolate drizzle and a cherry on top.",
+    image_url: "assets/images/Skillet-Chocolate-Chip-Cookie-4-of-14.jpg"
+  },
+  {
+    name: "Frozen Yogurt",
+    cost: 1.50,
+    description: "Frozen Yogurt as known as Froyo",
+    image_url: "assets/images/Froyo.jpg"
+  },
+  {
+    name: "Crepes",
+    cost: 5.50,
+    description: "A thin folded dough dessert that can have many different combinations",
+    image_url: "assets/images/crepes.jpeg"
+  },
+  {
+    name: "Chocolate Ice Cream",
+    cost: 4.50,
+    description: "A delicious chocolate that is very sweet",
+    image_url: "assets/images/chocoicecream.jpg"
   }
+
 
 ])
 
@@ -69,9 +130,9 @@ entrees.foods.create([
     image_url: "assets/images/iced-coffee.jpg"
     },
     {
-    name: "Buneary Frappe",
+    name: "Nutty Buneary Frappe",
     cost: 1.00,
-    description: "Buneary Frappe drink looks like a Buneary",
+    description: "A refreshing frappé with cookies shaped like Buneary's ears. The combination of the sweet cream and toasted nuts is superb",
     image_url: "assets/images/buneary-frappe.jpg"
    },
    {
@@ -79,6 +140,24 @@ entrees.foods.create([
     cost: 0.75,
     description: "A refreshing drink for pokemon",
     image_url: "assets/images/lilligant-tea.jpg"   
-   }     
+   },
+   {
+    name: "Hot Litwick Cocoa",
+    cost: 3.25,
+    description: "A hot chocolate in the shape of a candle",
+    image_url: "assets/images/hotlitwickcocoa.jpg"
+   },
+   {
+    name: "Bubble Tea",
+    cost: 4.75,
+    description: "A lovely drink that can have many different combinations (Image is Taro Flavored)",
+    image_url: "assets/images/taro-tea.jpg"
+   },
+   {
+    name: "Hot Coffee", 
+    cost: 1.50,
+    description: "Hot coffee brewed via French press method served in a 12oz mug.",
+    image_url: "assets/images/hot-coffee.jpg"
+  },  
 ])
 
